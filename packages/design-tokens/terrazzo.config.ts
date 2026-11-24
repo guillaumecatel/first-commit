@@ -1,6 +1,7 @@
 import { defineConfig } from '@terrazzo/cli'
 import css from '@terrazzo/plugin-css'
 import js from '@terrazzo/plugin-js'
+import tailwind from '@terrazzo/plugin-tailwind'
 
 export default defineConfig({
   tokens: ['src/tokens.resolver.json'],
@@ -19,6 +20,22 @@ export default defineConfig({
             `@media (prefers-color-scheme: dark) {\n  :root {\n    ${contents}\n  }\n}`,
         },
       ],
+    }),
+    tailwind({
+      template: '../src/tailwind.template.css',
+      filename: 'tokens.tailwind.css',
+
+      theme: {
+        color: ['color.**'],
+        spacing: ['spacing.**'],
+        radius: ['borderRadius.**'],
+
+        font: {
+          sans: 'typography.family.base',
+        },
+
+        text: ['typography.**'],
+      },
     }),
     js({
       filename: 'tokens.js',

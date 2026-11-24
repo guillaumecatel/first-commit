@@ -27,6 +27,7 @@ bun run build
 This generates:
 
 - `dist/tokens.css` — CSS custom properties with light and dark theme permutations.
+- `dist/tokens.tailwind.css` — the Tailwind v4 compatible CSS output.
 - `dist/tokens.js` — the JavaScript token resolver.
 - `dist/tokens.d.ts` — generated TypeScript declarations.
 
@@ -44,6 +45,14 @@ The stylesheet follows the operating system color-scheme preference:
 
 - Light tokens are applied by default.
 - Dark tokens are applied inside `prefers-color-scheme: dark`.
+
+### Tailwind
+
+Import the generated Tailwind v4 compatible stylesheet from your application:
+
+```css
+@import "@first-commit/design-tokens/tailwind";
+```
 
 ### JavaScript
 

@@ -16,3 +16,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - JavaScript token resolver with generated TypeScript declarations.
 - Token validation and linting through Terrazzo.
 - Workspace package structure and development scripts.
+- Tailwind v4 compatible CSS output.

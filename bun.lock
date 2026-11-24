@@ -28,6 +28,7 @@
         "@terrazzo/cli": "^2.10.0",
         "@terrazzo/plugin-css": "^2.10.0",
         "@terrazzo/plugin-js": "^2.10.0",
+        "@terrazzo/plugin-tailwind": "^2.10.0",
       },
     },
     "packages/tsconfigs": {
@@ -257,6 +258,8 @@
     "@terrazzo/plugin-css": ["@terrazzo/plugin-css@2.10.0", "", { "dependencies": { "@terrazzo/token-tools": "^2.10.0" }, "peerDependencies": { "@terrazzo/cli": "^2.10.0", "@terrazzo/parser": "^2.10.0" } }, "sha512-AP+RfBfb0YmU4Me3xITO+tlJldxWBG7Hamuur/+z+ZIi7yX3tEksevGwsr/+zEBb/pDf1/7m+e86d4uT9xDNjg=="],
 
     "@terrazzo/plugin-js": ["@terrazzo/plugin-js@2.10.0", "", { "dependencies": { "@terrazzo/parser": "^2.10.0", "@terrazzo/token-types": "^2.10.0", "scule": "^1.3.0" }, "peerDependencies": { "@terrazzo/cli": "^2.10.0" } }, "sha512-9DOxIzMjgIIUT6tk6CBXZPEI8et9v4cYKWcaZbnb+oytxVGRlo5jj5Ec9x3MY/dp8ntV7S9b7nqN3q8VeXOT4w=="],
+
+    "@terrazzo/plugin-tailwind": ["@terrazzo/plugin-tailwind@2.10.0", "", { "dependencies": { "@terrazzo/token-tools": "^2.10.0" }, "peerDependencies": { "@terrazzo/cli": "^2.10.0", "@terrazzo/parser": "^2.10.0", "@terrazzo/plugin-css": "^2.10.0", "tailwindcss": "^4.0.0" } }, "sha512-5+YrpARrvGmvdkz5QCojVG+p4GUHwcDLisOmgUX5tOGKJhIPySlu6kYio+fsOdCNnTG70kTqEgIWBTheO/ncdQ=="],
 
     "@terrazzo/token-tools": ["@terrazzo/token-tools@2.10.0", "", { "dependencies": { "@humanwhocodes/momoa": "^3.3.13", "@terrazzo/token-types": "^2.10.0", "colorjs.io": "^0.7.1", "wildcard-match": "^5.1.6" } }, "sha512-L06Aw59uESXbGnagSajEDBr3E8hQl0jJlsy8opwgQOvJFhxMT4dGCcOsRCh+nTfGA4uipJ8pWyQgVRW0uaUihw=="],
 
@@ -631,6 +634,8 @@
     "syncpack-windows-arm64": ["syncpack-windows-arm64@15.3.4", "", { "os": "win32", "cpu": "arm64" }, "sha512-UcB72GOXMPogye2gswk/Z3cXuWvYZMLbaZpScLddUUvsmU5gNkJge6KUFCvhi5EO6DMT7DO2uq4Qf8JJXF0z2w=="],
 
     "syncpack-windows-x64": ["syncpack-windows-x64@15.3.4", "", { "os": "win32", "cpu": "x64" }, "sha512-nqSEAPNPMNrnQKkJXRIxLBUZkj0Uc6m9HwEuHP7mC2crlD1uxxN6ovMRTxRYPc4MOUlLGz0jKsgIVF8svK4UTw=="],
+
+    "tailwindcss": ["tailwindcss@4.3.5", "", {}, "sha512-FcQk9BuffmEHJP2G0XmB2SplU1aLTI7j07Kunk+U74Ny+XiWOtzXz9aujFZ/avntw1e2cOv/3PkgzflQ7gX2vQ=="],
 
     "tinyexec": ["tinyexec@1.3.1", "", {}, "sha512-GCvB3aoys96IuDFBMcTB46JOR6mdMtAToqwiW8JlWhsoh1mhHi/xn9ss/Dg7N555GiJyEt2qzoG/NHCwM6h1EA=="],
 
