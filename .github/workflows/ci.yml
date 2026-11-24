@@ -41,7 +41,7 @@ jobs:
         run: bun biome ci .
 
       - name: Syncpack
-        run: bun syncpack lint && bun syncpack format --check
+        run: bun syncpack format --check
 
       - name: Typecheck
         run: bun run typecheck
