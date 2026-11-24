@@ -1,0 +1,39 @@
+{
+  "name": "{{ org.scope }}/{{ dashCase name }}",
+  "version": "0.0.0",
+  "private": true,
+  "description": "{{ description }}",
+  "license": "{{ org.license }}",
+  "author": "{{ org.author }}",
+  "homepage": "{{ org.repository }}/tree/main/packages/{{ dashCase name }}#readme",
+  "repository": {
+    "type": "git",
+    "url": "{{ org.repository }}.git",
+    "directory": "packages/{{ dashCase name }}"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "tsc --watch --noEmit",
+    "clean": "shx rm -rf {node_modules,.turbo,dist,coverage,*.tsbuildinfo}",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "{{ org.scope }}/tsconfigs": "workspace:*",
+    "@types/bun": "^1.4.5",
+    "typescript": "~7.0.2"
+  }
+}

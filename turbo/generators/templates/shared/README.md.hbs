@@ -1,0 +1,33 @@
+# {{ org.scope }}/{{ dashCase name }}
+
+{{ description }}
+
+## Installation
+
+This package is part of the [{{ org.name }}]({{ org.website }}) monorepo and
+is consumed internally through the workspace protocol.
+
+```sh
+bun add {{ org.scope }}/{{ dashCase name }}
+```
+
+## Usage
+
+```ts
+import { ping } from '{{ org.scope }}/{{ dashCase name }}'
+
+ping()
+```
+
+## Scripts
+
+| Script              | Description                          |
+| ------------------- | ------------------------------------- |
+| `bun run build`     | Type-checks and emits `dist/`          |
+| `bun run typecheck` | Type-checks the package without emitting |
+| `bun test`          | Runs the test suite                    |
+| `bun run clean`     | Removes build artifacts                |
+
+## License
+
+[{{ org.license }}](./LICENSE) © [{{ org.author }}]({{ org.website }})

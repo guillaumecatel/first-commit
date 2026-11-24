@@ -1,0 +1,9 @@
+{
+  "name": "First Commit",
+  "scope": "@first-commit",
+  "author": "First Commit",
+  "email": "contact@first-commit.site",
+  "website": "https://first-commit.site",
+  "repository": "https://github.com/guillaumecatel/first-commit",
+  "license": "MIT"
+}

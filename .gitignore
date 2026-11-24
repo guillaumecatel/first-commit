@@ -1,0 +1,145 @@
+# --- Editors & Development Tools ---
+
+.idea/
+*.iml
+*.iws
+*.ipr
+
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+
+# --- Operating System Files ---
+
+.DS_Store
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+._*
+Icon
+!icon
+
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+
+*~
+
+# --- Dependencies & Package Managers ---
+
+node_modules/
+
+.bun/
+bun.lockb
+
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+.node_history
+
+# --- Build Artifacts & Generated Files ---
+
+dist/
+build/
+out/
+.output/
+
+*.tsbuildinfo
+.tsbuildinfo
+
+# --- Environment Variables & Secrets ---
+
+.env
+.env.*
+!.env.example
+!.env.template
+
+# --- Logs & Runtime Files ---
+
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+pids/
+*.pid
+*.seed
+
+# --- Tests & Coverage Reports ---
+
+coverage/
+.nyc_output/
+lcov.info
+lib-cov/
+
+# --- Astro ---
+
+.astro/
+
+# --- Svelte & SvelteKit ---
+
+.svelte-kit/
+svelte.config.js.timestamp-*
+
+# --- Storybook ---
+
+storybook-static/
+*.storybook.log
+debug-storybook.log
+
+# --- Docker ---
+
+docker-compose.override.yml
+.docker/
+
+# --- Monorepo Tooling ---
+
+.turbo/
+.cache/
+
+# --- Binary & Compiled Artifacts ---
+
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.out
+
+# --- Archives & Packages ---
+
+*.7z
+*.csv
+*.dat
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# --- Temporary & Swap Files ---
+
+*.swo
+*.swp
+*.swn
+*.swm
+
+# --- Results & Generated Data ---
+
+results/
+
+*storybook.log

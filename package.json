@@ -1,0 +1,39 @@
+{
+  "name": "first-commit",
+  "version": "0.0.0",
+  "type": "module",
+  "packageManager": "bun@1.4.5",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "biome": "biome",
+    "build": "turbo run build",
+    "clean": "turbo run clean && shx rm -rf {node_modules,.turbo}",
+    "dev": "turbo run dev",
+    "format": "biome format . && syncpack format --check",
+    "format:fix": "biome format --write . && syncpack format",
+    "gen": "turbo gen && bun i",
+    "lint": "biome lint .",
+    "lint:fix": "biome lint . --write",
+    "nuke": "shx rm bun.lock && bun run clean",
+    "preinstall": "npx only-allow bun",
+    "syncpack": "syncpack",
+    "test": "turbo run test",
+    "typecheck": "turbo run typecheck"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.6.8",
+    "@commitlint/cli": "^21.2.4",
+    "@commitlint/config-conventional": "^21.2.4",
+    "@turbo/gen": "^2.11.13",
+    "@types/bun": "^1.4.5",
+    "@types/node": "^26.6.6",
+    "lefthook": "^2.2.2",
+    "shx": "^0.4.0",
+    "syncpack": "^15.3.4",
+    "turbo": "^2.11.13",
+    "typescript": "~7.0.2"
+  }
+}
