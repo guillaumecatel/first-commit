@@ -1,0 +1,25 @@
+{
+  "$schema": "https://www.designtokens.org/schemas/2025.10/resolver.json",
+  "name": "First Commit Design System",
+  "version": "2025.10",
+  "resolutionOrder": [
+    { "$ref": "#/sets/foundation" },
+    { "$ref": "#/modifiers/theme" }
+  ],
+  "sets": {
+    "foundation": {
+      "sources": [
+        { "$ref": "foundation/colors.tokens.json" },
+        { "$ref": "foundation/layout.tokens.json" }
+      ]
+    }
+  },
+  "modifiers": {
+    "theme": {
+      "contexts": {
+        "light": [{ "$ref": "theme/light.tokens.json" }],
+        "dark": [{ "$ref": "theme/dark.tokens.json" }]
+      }
+    }
+  }
+}

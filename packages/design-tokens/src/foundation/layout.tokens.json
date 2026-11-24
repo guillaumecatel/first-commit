@@ -1,0 +1,11 @@
+{
+  "$schema": "https://www.designtokens.org/schemas/2025.10/format.json",
+  "space": {
+    "0": { "$value": { "value": 0, "unit": "rem" }, "$type": "dimension" },
+    "xs": { "$value": { "value": 0.125, "unit": "rem" }, "$type": "dimension" },
+    "s": { "$value": { "value": 0.25, "unit": "rem" }, "$type": "dimension" },
+    "m": { "$value": { "value": 0.5, "unit": "rem" }, "$type": "dimension" },
+    "l": { "$value": { "value": 1, "unit": "rem" }, "$type": "dimension" },
+    "xl": { "$value": { "value": 2, "unit": "rem" }, "$type": "dimension" }
+  }
+}

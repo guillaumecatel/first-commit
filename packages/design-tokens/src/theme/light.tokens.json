@@ -1,0 +1,7 @@
+{
+  "$schema": "https://www.designtokens.org/schemas/2025.10/format.json",
+  "color": {
+    "bg": { "$value": "{color.gray.200}", "$type": "color" },
+    "text": { "$value": "{color.gray.900}", "$type": "color" }
+  }
+}

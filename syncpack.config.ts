@@ -34,6 +34,8 @@ export default {
     'workspaces',
     'engineStrict',
     'engines',
+    'main',
+    'types',
     'bin',
     'files',
     'exports',
