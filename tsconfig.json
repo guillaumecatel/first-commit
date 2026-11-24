@@ -1,4 +1,6 @@
 {
   "files": [],
-  "references": [{ "path": "./packages/toto" }]
+  "references": [
+    // { "path": "./packages/toto" }
+  ]
 }
