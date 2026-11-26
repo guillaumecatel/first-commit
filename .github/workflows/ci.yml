@@ -7,7 +7,7 @@ on:
 
 concurrency:
   group: ci-${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 permissions:
   contents: read
@@ -16,7 +16,9 @@ jobs:
   quality:
     name: Lint, typecheck, test & build
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+
+    timeout-minutes: 20
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -37,6 +39,12 @@ jobs:
       - name: Install dependencies
         run: bun install --frozen-lockfile
 
+      # Exécuté depuis apps/storybook pour utiliser le Playwright du lockfile
+      # (même révision de navigateur que celle attendue par Vitest).
+      - name: Install Playwright browsers
+        working-directory: apps/storybook
+        run: bunx playwright install --with-deps chromium
+
       - name: Biome
         run: bun biome ci .
 
@@ -56,7 +64,9 @@ jobs:
     name: Commit messages
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
+
     timeout-minutes: 5
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4

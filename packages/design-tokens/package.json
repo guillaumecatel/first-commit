@@ -33,8 +33,9 @@
   "scripts": {
     "build": "tz build",
     "check": "tz check && tz lint",
-    "clean": "rm -rf {node_modules,dist,.turbo}",
+    "clean": "shx rm -rf {node_modules,dist,.turbo}",
     "dev": "tz build --watch",
+    "postinstall": "bun run build",
     "test": "bun run check"
   },
   "dependencies": {
