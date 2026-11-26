@@ -7,7 +7,7 @@ on:
 
 concurrency:
   group: ci-${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 permissions:
   contents: read
@@ -18,12 +18,7 @@ jobs:
     runs-on: ubuntu-latest
 
     container:
-      # Keep in sync with the Playwright version used by the project.
-      # https://playwright.dev/docs/docker
       image: mcr.microsoft.com/playwright:v1.65.1-noble
-
-    env:
-      PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
 
     timeout-minutes: 20
 
@@ -56,6 +51,9 @@ jobs:
       - name: Install Playwright browsers
         run: bunx playwright install chromium
 
+      - name: Verify Playwright browsers
+        run: bunx playwright install --list
+
       - name: Biome
         run: bun biome ci .
 
@@ -75,6 +73,7 @@ jobs:
     name: Commit messages
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
+
     timeout-minutes: 5
 
     steps:
