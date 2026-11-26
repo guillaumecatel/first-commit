@@ -35,6 +35,7 @@
     "check": "tz check && tz lint",
     "clean": "shx rm -rf {node_modules,dist,.turbo}",
     "dev": "tz build --watch",
+    "postinstall": "bun run build",
     "test": "bun run check"
   },
   "dependencies": {
