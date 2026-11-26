@@ -1,0 +1,9 @@
+telemetry = false
+
+[test]
+coverage = true
+coverageSkipTestFiles = true
+coverageThreshold = 0.9
+coverageReporter = 'lcov'
+coverageDir = 'coverage'
+coveragePathIgnorePatterns = ['!src/**']

@@ -1,6 +1,6 @@
 import type { Preview } from '@storybook/svelte-vite'
 
-import '@first-commit/design-tokens/tailwind.css'
+import '../src/styles/preview.css'
 
 const preview: Preview = {
   parameters: {
