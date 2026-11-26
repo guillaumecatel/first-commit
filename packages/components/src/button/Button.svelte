@@ -1,40 +1,5 @@
 <script lang="ts">
-  import './Button.css'
-
-  interface Props {
-    /** Is this the principal call to action on the page? */
-    primary?: boolean
-    /** What background color to use */
-    backgroundColor?: string
-    /** How large should the button be? */
-    size?: 'small' | 'medium' | 'large'
-    /** Button contents */
-    label: string
-    /** The onclick event handler */
-    onclick?: () => void
-  }
-
-  const {
-    primary = false,
-    backgroundColor,
-    size = 'medium',
-    label,
-    ...props
-  }: Props = $props()
-
-  let mode = $derived(
-    primary ? 'storybook-button--primary' : 'storybook-button--secondary',
-  )
-  let style = $derived(
-    backgroundColor ? `background-color: ${backgroundColor}` : '',
-  )
+  import { Button } from 'bits-ui'
 </script>
 
-<button
-  type="button"
-  class={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-  {style}
-  {...props}
->
-  {label}
-</button>
+<Button.Root class="bg-gray-900 text-gray-200"> Button </Button.Root>
