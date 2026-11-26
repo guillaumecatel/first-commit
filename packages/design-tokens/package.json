@@ -1,0 +1,50 @@
+{
+  "name": "@first-commit/design-tokens",
+  "version": "0.0.0",
+  "description": "A modular design token pipeline for validating, transforming, and distributing DTCG-compliant tokens across platforms and design systems.",
+  "type": "module",
+  "license": "MIT",
+  "private": true,
+  "author": "First Commit",
+  "homepage": "https://github.com/guillaumecatel/first-commit/tree/main/packages/design-tokens#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guillaumecatel/first-commit.git",
+    "directory": "packages/design-tokens"
+  },
+  "main": "./dist/tokens.js",
+  "types": "./dist/tokens.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/tokens.d.ts",
+      "default": "./dist/tokens.js"
+    },
+    "./css": "./dist/tokens.css",
+    "./js": {
+      "types": "./dist/tokens.d.ts",
+      "default": "./dist/tokens.js"
+    },
+    "./package.json": "./package.json",
+    "./tailwind.css": "./dist/tokens.tailwind.css"
+  },
+  "scripts": {
+    "build": "tz build",
+    "check": "tz check && tz lint",
+    "clean": "rm -rf {node_modules,dist,.turbo}",
+    "dev": "tz build --watch",
+    "test": "bun run check"
+  },
+  "dependencies": {
+    "@terrazzo/token-types": "^2.10.0"
+  },
+  "devDependencies": {
+    "@terrazzo/cli": "^2.10.0",
+    "@terrazzo/plugin-css": "^2.10.0",
+    "@terrazzo/plugin-js": "^2.10.0",
+    "@terrazzo/plugin-tailwind": "^2.10.0",
+    "tailwindcss": "4.3.5"
+  }
+}

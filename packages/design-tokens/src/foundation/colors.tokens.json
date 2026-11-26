@@ -1,0 +1,15 @@
+{
+  "$schema": "https://www.designtokens.org/schemas/2025.10/format.json",
+  "color": {
+    "gray": {
+      "200": {
+        "$value": { "colorSpace": "srgb", "components": [0.82, 0.82, 0.82] },
+        "$type": "color"
+      },
+      "900": {
+        "$value": { "colorSpace": "srgb", "components": [0.04, 0.04, 0.04] },
+        "$type": "color"
+      }
+    }
+  }
+}

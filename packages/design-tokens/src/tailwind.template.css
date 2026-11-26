@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+/**
+ * Default theme
+ */
+@theme {
+  /* biome-ignore lint/suspicious/noUnknownAtRules: custom at-rule for Terrazzo */
+  @tz (theme: "light");
+}
+
+/**
+ * Dark theme
+ */
+@variant dark {
+  /* biome-ignore lint/suspicious/noUnknownAtRules: custom at-rule for Terrazzo */
+  @tz (theme: "dark");
+}
