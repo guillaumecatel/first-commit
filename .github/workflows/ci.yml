@@ -17,20 +17,11 @@ jobs:
     name: Lint, typecheck, test & build
     runs-on: ubuntu-latest
 
-    container:
-      image: mcr.microsoft.com/playwright:v1.65.1-noble
-
     timeout-minutes: 20
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Install system dependencies
-        run: |
-          apt-get update
-          apt-get install -y --no-install-recommends unzip
-          rm -rf /var/lib/apt/lists/*
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
@@ -48,11 +39,11 @@ jobs:
       - name: Install dependencies
         run: bun install --frozen-lockfile
 
+      # Exécuté depuis apps/storybook pour utiliser le Playwright du lockfile
+      # (même révision de navigateur que celle attendue par Vitest).
       - name: Install Playwright browsers
-        run: bunx playwright install chromium
-
-      - name: Verify Playwright browsers
-        run: bunx playwright install --list
+        working-directory: apps/storybook
+        run: bunx playwright install --with-deps chromium
 
       - name: Biome
         run: bun biome ci .
