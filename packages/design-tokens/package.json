@@ -28,7 +28,7 @@
       "default": "./dist/tokens.js"
     },
     "./package.json": "./package.json",
-    "./tailwind": "./dist/tokens.tailwind.css"
+    "./tailwind.css": "./dist/tokens.tailwind.css"
   },
   "scripts": {
     "build": "tz build",
@@ -44,6 +44,7 @@
     "@terrazzo/cli": "^2.10.0",
     "@terrazzo/plugin-css": "^2.10.0",
     "@terrazzo/plugin-js": "^2.10.0",
-    "@terrazzo/plugin-tailwind": "^2.10.0"
+    "@terrazzo/plugin-tailwind": "^2.10.0",
+    "tailwindcss": "4.3.5"
   }
 }
