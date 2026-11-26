@@ -1,6 +1,7 @@
 {
   "files": [],
   "references": [
+    { "path": "./packages/components" },
     { "path": "./packages/design-tokens" },
 
     { "path": "./apps/storybook" }
